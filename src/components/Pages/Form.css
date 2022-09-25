@@ -1,0 +1,79 @@
+label {
+    color: #232728;;
+    font-size: 1rem;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 70%;
+    font-weight: 700;
+    color: rgba(190, 95, 110, 0.4);
+}
+
+.form{
+    background-color: #cdc1a1;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: auto;
+    max-width: 600px;
+}
+
+form label {
+    margin-bottom: .5rem;
+}
+
+
+form input {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 400px;
+    height: 30px;
+    margin-bottom: 1rem;
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    background: rgba(255,255,255,.1);
+    border-style: none;
+    box-shadow: 2.5px 2px #888888 ;
+    color: #000000;
+    outline: none;
+}
+
+form textarea{
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 1rem;
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    background: rgba(255,255,255,.1);
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    color: #000000;
+    outline: none;
+}
+
+.btn{
+    font-size: 35%;
+    margin: auto;
+    display: block;
+    width: 100px;
+    box-shadow: 2.5px 2px #888888 ;
+    border-style: none;
+    background: rgba(172, 106, 117,0.4);
+    padding: 5px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color:  #484642;
+    letter-spacing: 2px;
+}

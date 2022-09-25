@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+#video {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+
+.content{
+    position:absolute;
+    top: 40%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+   
+}
+.hero {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+}
+.content h1{
+    font-size: 4rem;
+    font-family: 'Fredericka the Great', cursive;
+    color: black;
+}
+
+.content p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-family: "Sofia", sans-serif;
+    color: rgb(172, 106, 117);
+}
+
+@media screen and (max-width:640px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1.4rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
