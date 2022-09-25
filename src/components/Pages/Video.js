@@ -14,7 +14,7 @@ const Video = () => {
             <h1>PASSION FOR DESIGN.</h1>
             <p>Born from a passion for design.</p>
             <div>
-                <Link to='/contact' className='btn btn-light'>Launch</Link>
+                <Link to='/contact-us' className='btn btn-light'>Launch</Link>
             </div>
         </div>
     </div>
