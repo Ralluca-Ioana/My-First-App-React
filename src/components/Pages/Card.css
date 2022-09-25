@@ -1,10 +1,54 @@
 .container{
+    display: inline-block;
     width:300px;
     overflow:hidden;
-    box-shadow: 2.5px 2px rgb(97, 91, 91);
+    box-shadow: 0px 0px 15px -5px;
+    margin-bottom: 4rem;
+    margin-left: 2rem;
+    transition: 0.3s;
+    animation: ease-in;
+    background-color: antiquewhite;
+    border-radius: 50px;
+}
+
+.container:hover{
+    transform: scale(1.1);
+    box-shadow:  0px 0px 15px -5px;
 }
 
 .image img{
     overflow: hidden;
     height: 200px;
+    margin-top:1rem;
+    border-radius: 20px;
+}
+
+h3,p{
+    margin:0;
+    padding: 0;
+}
+
+.title h3{
+    font-size: 1.5rem;
+    font-family: "Sofia", sans-serif;
+    color: rgb(172, 106, 117);
+}
+
+.body p{
+    font-size: 0.7rem;
+    margin: 10px 20px;
+    text-indent: 20px;
+}
+
+.card-link{
+    font-size: 0.7rem;
+    align-items: center;
+    text-decoration: none;
+    color:  #0d0458;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.card-link:hover{
+    letter-spacing: 6px;
 }

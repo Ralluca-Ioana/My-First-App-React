@@ -23,12 +23,12 @@ function Navbar() {
                 </li>
                 <li className="nav-item">
                     <NavLink exact to='/services' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
-                        Services 
+                        About Us 
                     </NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink exact to='/products' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
-                        Products 
+                        Products
                     </NavLink>
                 </li>
                 <li className="nav-item">

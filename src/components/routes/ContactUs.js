@@ -6,7 +6,7 @@ import Footer from '../Pages/Footer'
 const ContactUs = () => {
   return (
     <div>
-      <Hero heading='CONTACT.' text='Contact GLX Travel' />
+      <Hero heading='CONTACT.' text='Contact Handmade' />
       <Form />
       <Footer/>
     </div>

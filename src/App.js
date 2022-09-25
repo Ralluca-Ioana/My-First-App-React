@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import {BrowserRouter as  Router,Switch ,Route } from 'react-router-dom';
 import Home from './components/routes/Home';
-import Services from './components/routes/Services';
+import AboutUs from './components/routes/AboutUs';
 import Products from './components/routes/Products';
 import ContactUs from './components/routes/ContactUs';
 
@@ -22,7 +22,7 @@ function App() {
             </Route>
    
             <Route path="/services">
-              <Services />
+              <AboutUs />
             </Route>
 
             <Route path="/products">

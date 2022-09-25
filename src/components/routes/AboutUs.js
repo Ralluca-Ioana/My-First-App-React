@@ -5,7 +5,7 @@ import Footer from '../Pages/Footer'
 const Services = () => {
   return (
     <div>
-      <Hero heading='SERVICES.' text='Services GLX Travel' />
+      <Hero heading='ABOUT US.' text='About Handmade' />
       <Footer />
     </div>
   )
