@@ -1,10 +1,12 @@
 import React from 'react'
 import './Card.css'
 import {Link} from 'react-router-dom'
+import { motion } from 'framer-motion';
 
 function Card({title,image, body}) {
   return (
-    <div className='container'>
+    <motion.div  whileHover={{ scale: 1.1 , textShadow: "0px 0px 10px rgb(255,182,193)",
+    boxShadow: "0px 0px 10px rgb(0,0,0)" }} className='container'>
         <div className="image">
             <img src={image} alt="" />
         </div>
@@ -20,7 +22,7 @@ function Card({title,image, body}) {
         <div className="button-card">
             <Link className='card-link' to='/products'>View more</Link>
         </div>
-  </div>
+    </motion.div>
   )
 }
 export default Card

@@ -1,19 +1,33 @@
 import React from 'react'
 import './Form.css'
+import { motion } from 'framer-motion';
 
 const Form = () => {
   return (
     <div className='form'>
         <form>
-            <label>Your Name</label>
+            <motion.label
+            initial={{x:'100vw'}}
+            animate={{x:0}}
+            transition={{type:'spring', delay: 0.6}}>Your Name</motion.label>
             <input type='text'></input>
-            <label>Email</label>
+            <motion.label
+            initial={{x:'100vw'}}
+            animate={{x:0}}
+            transition={{type:'spring', delay: 0.7}}>Email</motion.label>
             <input type='email'></input>
-            <label>Subject</label>
+            <motion.label
+            initial={{x:'100vw'}}
+            animate={{x:0}}
+            transition={{type:'spring', delay: 0.8}}>Subject</motion.label>
             <input type='text'></input>
-            <label>Details</label>
+            <motion.label
+            initial={{x:'100vw'}}
+            animate={{x:0}}
+            transition={{type:'spring', delay: 0.9}}>Details</motion.label>
             <textarea rows='6' placeholder='Type a short message here' />
-            <button className='btn'>Submit</button>
+            <motion.button whileHover={{ scale: 1.1 , textShadow: "0px 0px 10px rgb(255,182,193)",
+            boxShadow: "0px 0px 10px rgb(0,0,0)" }} className='btn'>Submit</motion.button>
         </form>
     </div>
   )
