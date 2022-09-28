@@ -30,6 +30,7 @@
   background: none;
   font-size: 1rem;
   letter-spacing: 2px;
+  color: black;
 }
 
 
@@ -42,14 +43,16 @@
     margin-left: 0rem;
   }
   .filterProduct ul button{
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+   
   }
   .filterProduct ul span{
-    margin: 1.7rem 0;
+    margin: 1.7rem 0.4rem;
+    margin-left: -1rem;
     font-size: 1rem; 
   }
   .filterProduct ul li{
-    margin:0 0.9rem;
+    margin:0 0.4rem;
   }
   .filterProduct ul button:hover{
     letter-spacing: 3px;
@@ -62,6 +65,9 @@
   }
 }
 
+.search-input{
+  margin:auto 20px;
+}
 .filterProduct ul button:hover{
   font-weight: 700;
   letter-spacing: 4px;

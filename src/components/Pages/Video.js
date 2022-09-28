@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 const Video = () => {
   return (
     <div className='hero'>
+      
         <video autoPlay loop muted id='video'>
             <source src={invitationVideo} type='video/mp4' />
         </video>
