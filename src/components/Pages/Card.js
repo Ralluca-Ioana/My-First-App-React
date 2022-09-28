@@ -8,7 +8,7 @@ function Card({title,image, body}) {
     <motion.div  whileHover={{ scale: 1.1 , textShadow: "0px 0px 10px rgb(255,182,193)",
     boxShadow: "0px 0px 10px rgb(0,0,0)" }} className='container'>
         <div className="image">
-            <img src={image} alt="" />
+            <img src={ image } alt="" />
         </div>
         <div className="content-card">
             <div className="title">

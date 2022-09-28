@@ -1,23 +1,129 @@
-.app {
-    font-family: sans-serif;
-    height: 100vh;
-    display: flex;
+
+.productWrapper{
+  padding: 5% 10%;
+}
+
+.filterProduct{
+  display: flex;
+  flex-direction: row;
+}
+.filterProduct ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 25rem;
+}
+
+.filterProduct ul li{
+  margin:0 1.2rem;
+}
+.filterProduct ul span{
+  margin: 1.3rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(206, 107, 124, 0.9);
+  font-family: 'Fredericka the Great'
+}
+
+.filterProduct ul button{
+  border: none;
+  background: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+
+@media (max-width: 800px) {
+  .productWrapper{
+    padding: 3% 10%;
+  }
+  .filterProduct ul {
+    flex-direction: row;
+    margin-left: 0rem;
+  }
+  .filterProduct ul button{
+    font-size: 0.8rem;
+  }
+  .filterProduct ul span{
+    margin: 1.7rem 0;
+    font-size: 1rem; 
+  }
+  .filterProduct ul li{
+    margin:0 0.9rem;
+  }
+  .filterProduct ul button:hover{
+    letter-spacing: 3px;
+  }
+  .filterProduct{
     flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
   }
-  .filter-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  span.search-title{
+    font-size: 1rem;
   }
-  #category-list {
-    padding: 5px;
-  }
-  .product-list {
+}
+
+.filterProduct ul button:hover{
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgba(182, 106, 39, 0.9);
+}
+
+.search-title{
+  margin: 1.3rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(206, 107, 124, 0.9);
+  font-family: 'Fredericka the Great';
+}
+.filterProduct input{
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  text-align: center;
+  bottom: 0;
+  border-bottom-color: rgba(88, 87, 84, 0.9);
+}
+.filterProduct input::placeholder{
+  color: rgba(182, 106, 39, 0.9);
+  font-style: italic;
+}
+.filterProduct input:focus{
+  outline: none;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.product-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    font-size: 20px;
-  }
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px 100px; 
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+}
+
+.product{
+  margin: 20px auto;
+  display: inline-block;
+  width:300px;
+  overflow:hidden;
+  box-shadow: 0px 0px 15px -5px;
+  background-color: rgba(162, 159, 156, 0.3);
+  border-radius: 30px;
+}
+
+
+.product img{
+  height: 200px;
+  margin-top: 1rem;
+  border-radius: 20px;
+}
+
+.body-product{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

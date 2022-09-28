@@ -1,112 +1,84 @@
 import React from 'react'
-import { useState, useEffect, useMemo } from "react";
-import Item from './Item';
-import './SectionProduct.css'
-
+import { Element } from "./Element";
+import { useEffect, useState} from "react";
+import './SectionProduct.css';
+import './Card.css';
+import { motion } from 'framer-motion';
 
 function SectionProduct() {
-     // Default Value
-  const products = [
-    { id:1, image: "files/wedding.jpg", name: "wedding nov", price: "2.5", category: "wedding" },
-    { id:2, image: "files/wedding.jpg", name: "boy-baptisme",price: "2", category: "baptisme" },
-    { id:3, image: "files/wedding.jpg", name: "girl baptisme",price: "3.5", category: "baptisme" },
-    { id:4, image: "files/wedding.jpg", name: "accesories", price: "4.5", category: "accesories" },
-    // { name: "marturii", category: "accesories" }
-  ];
-  const [productList, setProductList] = useState([]);
-
-  const [selectedCategory, setSelectedCategory] = useState();
+  
+  const [data,setData] = useState([]);
+  const [collection,setCollection] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
- 
 
-  //Search list of objects
+  useEffect(()=>{
+    setData(Element);
+    setCollection([...new Set(Element.map((item)=> item.category))])
+  },[]) 
+
+  const gallery_filter = (itemData) =>{
+    const filterData = Element.filter((item)=> item.category === itemData);
+    setData(filterData);
+  }
+
+
+  //Search list by name objects 
   const handleSearch = (event) => {
-    const query = event.target.value
-    setSearchQuery(query)
+  const query = event.target.value;
+  setSearchQuery(query);
 
-    const searchList = products.filter((item)=>{
-      return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
-    })
+  const searchList = Element.filter((item)=>{
+    return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  })
 
-    setProductList(searchList)
+    setData(searchList)
     };
-
-  // Add default value on page load
-  useEffect(() => {
-    setProductList(products);
-  }, []);
-
-  // Function to get filtered list
-  function getFilteredList() {
-    // Avoid filter when selectedCategory is null
-    if (!selectedCategory) {
-      return productList;
-    }
-    return productList.filter((item) => item.category === selectedCategory);
-  }
-
-  // Avoid duplicate function calls with useMemo
-  var filteredList = useMemo(getFilteredList, [selectedCategory, productList]);
-  console.log(filteredList);
-  function handleCategoryChange(event) {
-    setSelectedCategory(event.target.value);
-  }
-
-
   return (
     <div className="app">
-      <div className="filter-container">
-      <h6>Search </h6>
-      <input
+      <div className="productWrapper">
+        <div className="filterProduct">
+
+          <span className='search-title'>Search </span>
+          <input
             type="text"
             name="search"
-            placeholder="Search"
+            placeholder="Type here"
+            className='search-input'
             value={searchQuery}
             onChange={handleSearch}
           />
-        <div>Filter:</div>
-        <div>
-          <select
-            name="category-list"
-            id="category-list"
-            onChange={handleCategoryChange}
-          >
-            <option value="">All</option>
-            <option value="wedding">wedding</option>
-            <option value="baptisme">baptisme</option>
-            <option value="accesories">accesories</option>
-          </select>
+          
+          <ul className='button-filter float'>
+            <span>Filter </span>
+            <li className='item float-item'><button onClick={()=> setData(Element)}>All</button></li>
+            {
+              collection.map((item)=> <li><button onClick={()=>{gallery_filter(item)}}>{item}</button></li>)
+            }
+          </ul>
           
         </div>
-      </div>
-      <div className="product-list">
-        {filteredList.map(element => {
-        //   <Item {...element} key={index} />
-        return (
-            <div className="card"  key={element.id}>
-                <div className="image">
-                    <img src={element.image} alt="" />
+        <div className="product-container">
+          {
+            data.map((item)=> 
+            <motion.div whileHover={{ scale: 1.1 , boxShadow: "0px 0px 10px rgb(0,0,0)" }} key={item.id} className="product">
+              <div className="image">
+                <img src={item.image  } alt="" />
+              </div>
+              <div className="content-card">
+                <div className="title">
+                    <h3>{item.name}</h3>
                 </div>
-                <div>Nume:</div>
-                <p className="num-text"> {element.name}</p>
-                <div>Categorie:</div>
-                <p className="title"> {element.category}</p>
-                <div>Pret:</div>
-                <p className="description"> 
-                  {element.price} lei
-                </p>
-            </div>
-          
-             
-          );
-        })}
-         {/* {filteredList.map((element, index) => (
-          <Item {...element} key={index} />
-        ))} */}
-        
+                <div className="body-product">
+                  <span style={{fontSize: '0.7rem'}}><b>Price:</b> <span style={{fontSize: '0.9rem', fontFamily:'Lucida Handwriting' , color: 'rgb(172, 106, 117)'}}>{item.price} <sup style={{fontFamily:'Lucida Handwriting'}}>lei</sup></span></span><br />
+                  <span style={{fontSize: '0.7rem', marginLeft: '20px'}}><b>Category:</b> <span style={{fontSize: '0.9rem', fontFamily:'Lucida Handwriting', color: 'rgb(172, 106, 117)'}}>{item.category}</span></span>
+                </div>
+              </div> 
+            </motion.div> )
+          }
+        </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default SectionProduct

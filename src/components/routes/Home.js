@@ -5,7 +5,7 @@ import Card from '../Pages/Card'
 import wedding from '../files/wedding.jpg'
 import baptism from '../files/baptism.jpg'
 import accessories from '../files/accesories.jpg'
-import { motion } from 'framer-motion';
+
 
 const Home = () => {
   return (
