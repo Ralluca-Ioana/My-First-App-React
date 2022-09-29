@@ -1,6 +1,5 @@
-import React from 'react'
+import React , { useEffect, useState} from 'react'
 import { Element } from "./Element";
-import { useEffect, useState} from "react";
 import './SectionProduct.css';
 import './Card.css';
 import { motion } from 'framer-motion';
@@ -8,31 +7,29 @@ import { motion } from 'framer-motion';
 function SectionProduct() {
   
   const [data,setData] = useState([]);
-  const [collection,setCollection] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [category,setCategory] = useState([]);
+  const [searchWord, setSearchWord] = useState("");
 
   useEffect(()=>{
     setData(Element);
-    setCollection([...new Set(Element.map((item)=> item.category))])
+    setCategory([...new Set(Element.map((item)=> item.category))])
   },[]) 
 
-  const gallery_filter = (itemData) =>{
+  const photos_filter = (itemData) =>{
     const filterData = Element.filter((item)=> item.category === itemData);
     setData(filterData);
   }
 
-
-  //Search list by name objects 
   const handleSearch = (event) => {
-  const query = event.target.value;
-  setSearchQuery(query);
+    const word = event.target.value;
+    setSearchWord(word);
 
-  const searchList = Element.filter((item)=>{
-    return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  })
-
+    const searchList = Element.filter((item)=>{
+      return item.name.toLowerCase().indexOf(word.toLowerCase()) !== -1
+    })
     setData(searchList)
-    };
+  };
+
   return (
     <div className="app">
       <div className="productWrapper">
@@ -44,7 +41,7 @@ function SectionProduct() {
             name="search"
             placeholder="Type here"
             className='search-input'
-            value={searchQuery}
+            value={searchWord}
             onChange={handleSearch}
           />
           
@@ -52,7 +49,7 @@ function SectionProduct() {
             <span>Filter </span>
             <li className='item float-item'><button onClick={()=> setData(Element)}>All</button></li>
             {
-              collection.map((item)=> <li><button onClick={()=>{gallery_filter(item)}}>{item}</button></li>)
+              category.map((item)=> <li><button onClick={()=>{photos_filter(item)}}>{item}</button></li>)
             }
           </ul>
           

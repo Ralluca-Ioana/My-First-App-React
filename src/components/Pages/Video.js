@@ -1,7 +1,6 @@
 import React from 'react'
 import './Video.css'
 import { Link } from 'react-router-dom'
-
 import invitationVideo from '../files/invitation.mp4'
 import { motion } from 'framer-motion';
 

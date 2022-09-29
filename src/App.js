@@ -6,9 +6,6 @@ import AboutUs from './components/routes/AboutUs';
 import Products from './components/routes/Products';
 import ContactUs from './components/routes/ContactUs';
 
-
-
-
 function App() {
   return (
     <>
