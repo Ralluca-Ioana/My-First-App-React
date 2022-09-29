@@ -3,19 +3,19 @@ import './Card.css'
 import {Link} from 'react-router-dom'
 import { motion } from 'framer-motion';
 
-function Card({title,image, body}) {
+function Card(props) {
   return (
         <motion.div  whileHover={{ scale: 1.1 , textShadow: "0px 0px 10px rgb(255,182,193)",
         boxShadow: "0px 0px 10px rgb(0,0,0)" }} className='container'>
             <div className="image">
-                <img src={ image } alt="" />
+                <img src={ props.image } alt="" />
             </div>
             <div className="content-card">
                 <div className="title">
-                    <h3>{title}</h3>
+                    <h3>{props.title}</h3>
                 </div>
                 <div className="body">
-                    <p>{body}</p>
+                    <p>{props.body}</p>
                 </div>
             </div>
             

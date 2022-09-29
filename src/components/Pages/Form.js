@@ -25,7 +25,7 @@ const Form = () => {
             initial={{x:'100vw'}}
             animate={{x:0}}
             transition={{type:'spring', delay: 0.9}}>Details</motion.label>
-            <textarea rows='6' placeholder='Type a short message here' />
+            <textarea rows='6' placeholder='Type a message here' />
             <motion.button whileHover={{ scale: 1.1 , textShadow: "0px 0px 10px rgb(255,182,193)",
             boxShadow: "0px 0px 10px rgb(0,0,0)" }} className='btn'>Submit</motion.button>
         </form>
