@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Hero.css'
 import { motion } from 'framer-motion';
 
- class Hero extends Component {
+class Hero extends Component {
   render() {
     return (
       <div className='heroImg'>
@@ -10,8 +10,8 @@ import { motion } from 'framer-motion';
           initial={{x:'100vw'}}
           animate={{x:0}}
           transition={{type:'spring', delay: 0.5}}>
-            <h1>{this.props.heading}</h1>
-            <p>{this.props.text}</p>
+          <h1>{this.props.heading}</h1>
+          <p>{this.props.text}</p>
         </motion.div>
       </div>
     )

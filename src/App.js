@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import {BrowserRouter as  Router,Switch ,Route } from 'react-router-dom';
+import {BrowserRouter as  Router, Switch ,Route } from 'react-router-dom';
 import Home from './components/routes/Home';
 import AboutUs from './components/routes/AboutUs';
 import Products from './components/routes/Products';
@@ -9,7 +9,6 @@ import ContactUs from './components/routes/ContactUs';
 function App() {
   return (
     <>
-    
      <Router>
         <Navbar />
         <div className="pages">
@@ -28,17 +27,13 @@ function App() {
 
             <Route path="/contact-us">
               <ContactUs />
-             
             </Route>
           </Switch>
-        </div>
-          
+        </div>  
     </Router>
-    
     </>
   );
 }
-
 export default App;
 
 

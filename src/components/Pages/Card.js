@@ -8,7 +8,7 @@ function Card(props) {
         <motion.div  whileHover={{ scale: 1.1 , textShadow: "0px 0px 10px rgb(255,182,193)",
         boxShadow: "0px 0px 10px rgb(0,0,0)" }} className='container'>
             <div className="image">
-                <img src={ props.image } alt="" />
+                <img src={props.image} alt="" />
             </div>
             <div className="content-card">
                 <div className="title">
@@ -23,6 +23,6 @@ function Card(props) {
                 <Link className='card-link' to='/products'>View more</Link>
             </div>
         </motion.div>
-  )
+    )
 }
 export default Card

@@ -15,7 +15,7 @@ function SectionProduct() {
     setCategory([...new Set(Element.map((item)=> item.category))])
   },[]) 
 
-  const photos_filter = (itemData) =>{
+  const category_filter = (itemData) =>{
     const filterData = Element.filter((item)=> item.category === itemData);
     setData(filterData);
   }
@@ -27,7 +27,7 @@ function SectionProduct() {
     const searchList = Element.filter((item)=>{
       return item.name.toLowerCase().indexOf(word.toLowerCase()) !== -1
     })
-    setData(searchList)
+    setData(searchList);
   };
 
   return (
@@ -49,7 +49,7 @@ function SectionProduct() {
             <span>Filter </span>
             <li className='item float-item'><button onClick={()=> setData(Element)}>All</button></li>
             {
-              category.map((item)=> <li><button onClick={()=>{photos_filter(item)}}>{item}</button></li>)
+              category.map((item)=> <li><button onClick={()=>{category_filter(item)}}>{item}</button></li>)
             }
           </ul>
           

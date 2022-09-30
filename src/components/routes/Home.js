@@ -19,11 +19,11 @@ const Home = () => {
           title='Wedding Invitations'
           image={wedding}
           body="Our invitations are the result of the inspiration brought to us by the most important events..."/>
-          <Card
+        <Card
           title='Baptism Invitations'
           image={baptism}
           body="Baptism represents one of the most important moments in the life of the little one, but also of the parent..."/>
-          <Card
+        <Card
           title='Accesories'
           image={accessories}
           body="The details make the difference, and we offer you a wide range of elegant, high-quality accessories..."/>
