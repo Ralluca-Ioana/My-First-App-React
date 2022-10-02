@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 function SectionProduct() {
   
   const [data,setData] = useState([]);
-  const [category,setCategory] = useState([]);
+  const [category,setCategory] = useState([]); 
   const [searchWord, setSearchWord] = useState("");
 
   useEffect(()=>{

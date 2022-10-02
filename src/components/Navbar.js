@@ -17,22 +17,22 @@ function Navbar() {
            
             <ul className={click ? 'nav-menu active':'nav-menu'}>
                 <li className="nav-item">
-                    <NavLink exact to='/' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
+                    <NavLink  to='/' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
                         Home 
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink exact to='/services' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
+                    <NavLink  to='/services' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
                         About Us 
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink exact to='/products' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
+                    <NavLink  to='/products' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
                         Products
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink exact to='/contact-us' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
+                    <NavLink  to='/contact-us' activeClassName = 'active' className='nav-links' onClick={() => setClick(!click)}>
                         Contact Us 
                     </NavLink>
                 </li>
